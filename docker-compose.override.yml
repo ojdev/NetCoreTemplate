@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  core.template:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Server=192.168.0.252,5433;Database=Core.Template.Demo;User Id=sa;Password=Pass@word;
+      - ConnectionStrings__Event=Server=192.168.0.252,5433;Database=Core.Template.Demo.EventStore;User Id=sa;Password=Pass@word;
+      - App__ConsulUrl=http://192.168.0.252:8500
+      - App__EventBus__ServiceName=rabbitmq-5672
+      - App__EventBus__UserName=guest
+      - App__EventBus__Password=guest
+      - App__EnableSwagger=true
+    ports:
+      - "6000:80"

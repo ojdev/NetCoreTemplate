@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  core.template:
+    image: ${DOCKER_REGISTRY}core.template:${TAG:-latest}
+
+networks:
+  default:
+    external:
+      name: housecool_bridge_network

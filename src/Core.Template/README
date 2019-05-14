@@ -1,0 +1,17 @@
+## $safeprojectname$
+1. 复制以下命令
+~~~
+((Get-Content $safeprojectname$.sln).replace('"$safeprojectname$\', '"') | Set-Content $safeprojectname$\$safeprojectname$.sln) -or (Copy-Item .\$safeprojectname$\* .\ -Recurse) -or (Remove-Item .\$safeprojectname$\ -Recurse -Force) -or ((Get-Content docker-compose\docker-compose.override.yml).replace('$safeprojectname$', '$safeprojectname$'.ToLower()) | Set-Content docker-compose\docker-compose.override.yml) -or ((Get-Content docker-compose\docker-compose.yml).replace('$safeprojectname$', '$safeprojectname$'.ToLower()) | Set-Content docker-compose\docker-compose.yml)
+~~~
+1. 关闭Visual Studio
+1. 在解决方案文件的位置打开powershell，粘贴命令并执行
+1. 重新打开解决方案，修改DbContext的名字。
+
+
+##迁移 
+
+* Add-Migration Initial -Context TemplateContext -OutputDir Infrastructure\Migrations\Default
+* Add-Migration Initial -Context EventSourceContext -OutputDir Infrastructure\Migrations\EventStore
+
+回退迁移 -- Update-Database -Context TemplateContext Initial
+移除迁移 -- Remove-Migration -Context TemplateContext
