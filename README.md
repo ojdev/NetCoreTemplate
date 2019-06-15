@@ -14,6 +14,7 @@
 - [x] 演示数据生成(GenFu)
 - [x] RabbitMQ
 - [ ] 读写分离
+- [ ] GraphQL
 
 ## 用到的第三方包
 
