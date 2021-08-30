@@ -1,4 +1,4 @@
-弃用，新版本参见 [https://github.com/ojdev/NetCoreTemplete/tree/main/content](https://github.com/ojdev/NetCoreTemplete/tree/main/content)
+弃用，新版本参见 [https://github.com/ojdev/Net5Template/tree/main/content](https://github.com/ojdev/Net5Template/tree/main/content)
 
 ## 特性
 
