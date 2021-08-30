@@ -1,3 +1,5 @@
+弃用，新版本参见 [https://github.com/ojdev/NetCoreTemplete/tree/main/content](https://github.com/ojdev/NetCoreTemplete/tree/main/content)
+
 ## 特性
 
 - [x] .Net Core 2.2
